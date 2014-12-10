@@ -20,7 +20,12 @@ body {
 }
 
 
+#logo {
 
+  position: absolute;
+  top: 25px;
+
+}
 
 #link {
   color: white;

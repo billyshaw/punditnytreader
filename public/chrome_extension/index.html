@@ -5,7 +5,6 @@
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width"/>
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<title>Pundit NYT Reader by Billy Shaw Susanto</title>
 	</head>
 
 </html>
@@ -15,11 +14,13 @@
 	<!-- Background Image -->
 	<img class="bg" id="bg">
 
+	<div id="logo">
 	<div class="svg-wrapper">
 	  <svg height="60" width="200" xmlns="http://www.w3.org/2000/svg">
 	    <rect class="shape" height="60" width="200" />
 	    <p id="settings"><span ><a href="http://pundit-nyt-reader.herokuapp.com/pundit">Pundit.</a></span></p>
 	  </svg>
+	</div>
 	</div>
 
 	<div id="weather_location"><p id="date"></p><p id="location"></p></div>
@@ -46,7 +47,7 @@
 	<!-- Use Google's JS Library to Get Location-->
 	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
 	<script type="text/javascript">
-        if(google.loader.ClientLocation)
+        if(google.loader.ClientLocation)	
         {
             visitor_lat = google.loader.ClientLocation.latitude;
             visitor_lon = google.loader.ClientLocation.longitude;
@@ -67,8 +68,6 @@
         }
     </script>
 
-    <!-- Use Intense Images -->
-    <script src="./javascripts/intense.min.js"></script>
 
 
 </body>
