@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lan="en">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Pundit NYT Reader by Billy Shaw Susanto</title>
+	</head>
+
+</html>
+
+<body>
+
+	<!-- Background Image -->
+	<img class="bg" id="bg">
+
+	<div class="svg-wrapper">
+	  <svg height="60" width="200" xmlns="http://www.w3.org/2000/svg">
+	    <rect class="shape" height="60" width="200" />
+	    <p id="settings"><span ><a href="http:/localhost:3000/pundit">Pundit.</a></span></p>
+	  </svg>
+	</div>
+
+	<div id="weather_location"><p id="date"></p><p id="location"></p></div>
+	<!--
+	<div id="datetime">
+	<h3 id="clock"></h3>
+	</div> 
+
+
+	<div id="today"><h3><span id="date"></span></h3></div> -->
+
+	<!-- Article Title , Abstract, and Link-->
+	<div id="article">
+		<h2><span>NYT - </span><span id="title"></span></h2>
+		<h3><span><p id="caption"></p><a id="link"><b><u>Read more</u></b></a></span></h3>
+	</div>
+
+	<!-- Image Caption -->
+	<p id="img_caption"><span></span></p>
+
+	<!-- Include script at the bottom of the body page -->
+	<script src="./javascripts/pundit.js"></script>
+
+	<!-- Use Google's JS Library to Get Location-->
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	<script type="text/javascript">
+        if(google.loader.ClientLocation)
+        {
+            visitor_lat = google.loader.ClientLocation.latitude;
+            visitor_lon = google.loader.ClientLocation.longitude;
+            visitor_city = google.loader.ClientLocation.address.city;
+            visitor_region = google.loader.ClientLocation.address.region;
+            visitor_country = google.loader.ClientLocation.address.country;
+            visitor_countrycode = google.loader.ClientLocation.address.country_code;
+            console.log(visitor_lat);
+            console.log(visitor_lon);
+            console.log(visitor_city);
+            console.log(visitor_country);
+            document.getElementById('location').innerHTML = visitor_city + ", " + visitor_country;
+
+        }
+        else
+        {
+            console.log("something went wrong!");
+        }
+    </script>
+
+    <!-- Use Intense Images -->
+    <script src="./javascripts/intense.min.js"></script>
+
+
+</body>
