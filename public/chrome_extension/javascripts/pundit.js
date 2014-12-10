@@ -25,7 +25,7 @@ function createCORSRequest(method, url) {
 function makeCorsRequest() {
 
   // All HTML5 Rocks properties support CORS.
-  var url = 'http://localhost:3000/';
+  var url = 'http://pundit-nyt-reader.herokuapp.com/';
 
 
   var xhr = createCORSRequest('GET', url);
