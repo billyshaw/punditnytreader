@@ -54,5 +54,5 @@ mongoose.model('Feedback', Feedback);
 mongoose.model('Signup', Signup);
 
 // Connect to the Database (newster)
-mongoose.connect('mongodb://localhost/pundit');
+mongoose.connect('mongodb://heroku_app32396858:ut3c5aao19decavej5341ujna3@ds063150.mongolab.com:63150/heroku_app32396858');
 
